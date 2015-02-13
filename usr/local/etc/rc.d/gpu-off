@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# PROVIDE: gpu-off
+
+. /etc/rc.subr
+
+name="gpu-off"
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+gpu-off_start() {
+   /usr/local/bin/gpu-off
+}
+
+gpu-off_stop() {
+}
+
+run_rc_command "$1"
+
+# eof
