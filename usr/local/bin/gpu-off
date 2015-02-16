@@ -16,7 +16,7 @@ if [ $MODULE_LOADED != "0" ]; then
 fi
 
 
-if [ -f ~/.gpu_method ]; then
+if [ -f /usr/local/etc/gpu-off.conf ]; then
 echo "Using previously stored method, as it was previously successful..."
 . /usr/local/etc/gpu-off.conf
 else
@@ -60,10 +60,10 @@ echo -n "Trying $m: "
 	case "$result" in
 	0)
 		echo "Call succeeded!"
-		if [ ! -f ~/.gpu_method ];
+		if [ ! -f /usr/local/etc/gpu-off.conf ];
 		then
 			echo "Storing $m in /usr/local/etc/gpu-off.conf for reuse"
-			echo "export methods=\"$m\"" > ~/.gpu_method
+			echo "export methods=\"$m\"" > /usr/local/etc/gpu-off.conf
 		fi
 		break
 		;;
