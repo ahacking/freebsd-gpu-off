@@ -1,7 +1,7 @@
 ## Installation
 
 ```sh
-git checkout ahacking/freebs-gpu-off
+git checkout ahacking/freebsd-gpu-off
 cp -R freebsd-gpu-off/usr/local /usr/local
 ```
 
